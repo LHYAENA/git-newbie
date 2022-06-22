@@ -1,0 +1,42 @@
+body{
+  background-color:blueviolet;
+}
+
+button{
+  border:1px solid gainsboro;
+}
+
+div.calculator {
+  width: 200px;
+  margin: 15% auto;
+  border-radius: 10px;
+  box-shadow: 0px 1px 3px black;
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: 35px repeat(5, 40px);
+}
+
+#screen {
+  border:1px solid gainsboro;
+  border-start-end-radius: 10px;
+  border-start-start-radius: 10px;
+  background-color: gainsboro;
+  grid-column: span 4;
+  text-align:end;
+  color:black;
+}
+
+#equal{
+  grid-column: 4/5;
+  grid-row: 3/7;
+  border-end-end-radius:10px;
+  background-color:lightsalmon;
+}
+
+#plus, #minus, #times, #divide{
+  background-color: lightskyblue;
+}
+
+#zero{
+  border-end-start-radius:10px;
+}

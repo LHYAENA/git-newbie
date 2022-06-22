@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: black;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.container {
+  height: 100vh;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:30px;
+}
+
+article {
+  width: 250px;
+  border:1px solid grey;
+  border-radius: 20px;
+  background-color: grey;
+}
+
+div.card-title{
+  height: 50px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+div.img-user-date{
+  display: flex;
+  align-items: center;
+  gap:5px;
+}
+
+div.img-user-date img{
+  border-radius: 50%;
+  height: 40px;
+  margin-left: 5px;
+}
+
+div.user-date{
+  height:50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+div.user-date h2{
+  font-size: 1.1rem;
+}
+
+div.user-date h3{
+  font-size: .7rem;
+}
+
+div.setting{
+  margin-right: 5px;
+}
+
+div.card-img img{
+  width:100%;
+}
+
+span.heart{
+  margin-left:10px;
+}
+
+div.card-text p{
+  padding:5px;
+  font-size: .785rem;
+  text-align: justify;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width:768px){
+  div.container{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: auto;
+  }
+}
+
+@media screen and (max-width:375px){
+  div.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,116 @@
+/* setting the standard style reset */
+*{
+  margin:0; padding:0;
+  box-sizing:border-box;
+}
+
+/* just for energy saving */
+body{background-color:black;}
+
+/* flex container and his awesome children */
+aside.sidebar{
+  height:100vh;
+  width:200px;
+  background-color:gainsboro;
+  border:10px solid gainsboro;
+  box-shadow:2px 0px 6px grey;
+  /* flex properties here */
+  display:flex; /* creating the flex container */
+  flex-direction:column; /* showing items as a column */
+  align-items:center; /* centring items for better appear */
+}
+
+/* the flex sub-containers and his awesome children */
+aside.sidebar div.logo, div.links, div.content, div.user{
+  width:100%;
+  transform:skew(0deg, -3deg);
+  border-bottom:5px solid grey;
+  /* flex properties here */
+  display:flex; /* creating the flex sub-container */
+  flex-direction:column; /* showing items as a column */
+  justify-content:center; /* centring the entire content */
+  align-items:center; /* centring items for better appear */
+}
+
+/* flex sub-sub-container and his awesome children */
+aside.sidebar div.user div.user-info{
+  /* flex properties here */
+  display:flex; /* creating the flex sub-sub-container */
+  flex-direction:column; /* showing items as a column */
+  align-items:center; /* centring items for better appear */
+}
+
+/* setting the style for the logo section */
+aside.sidebar div.logo img{width:100%;}
+/* setting the mouse-hover behaviour for the logo */
+aside.sidebar div.logo img:hover{cursor:pointer;}
+
+/* setting the style for the links section */
+aside.sidebar div.links{height:200px;}
+aside.sidebar div.links ul{list-style-type:none;}
+
+/* setting the style for the anchors */
+aside.sidebar div.links ul li>a{
+  color:#2b2b2b;
+  font-size:2rem;
+  text-decoration:none;
+  text-transform:capitalize;
+}
+
+/* setting the mouse-hover behaviour for the anchors */
+aside.sidebar div.links ul li>a:hover{
+  color:#2b2bb2;
+  font-size:2.5rem;
+  text-decoration:underline wavy red;
+  /* setting the transition effect */
+  transition-property:color, font-size, text-decoration;
+  transition-timing-function:ease-in-out;
+  transition-duration:300ms;
+}
+
+/* setting the style of the content section */
+aside.sidebar div.content article>h2{
+  color:gainsboro;
+  font-size:2rem;
+}
+/* changing the selection style effect */
+aside.sidebar div.content article>h2::selection{
+  background-color:yellow;
+  color:black;
+}
+
+/* using the flex grow propertie to push
+the last-flex-child at the end of the page
+(notice that the penultimate-flex-child
+will take all the remaining space) */
+aside.sidebar div.content{flex:1;}
+
+/* setting the style of the user section */
+aside.sidebar div.user{padding:25px;}
+/* creating a circle effect for the user picture */
+aside.sidebar div.user img{border-radius:50%;}
+/* setting the mouse-hover behaviour for the user picture */
+aside.sidebar div.user img:hover{cursor:pointer;}
+
+/* giving different dimension for the flex-container-sub-child (user info) */
+aside.sidebar div.user div.user-info h2{font-size:1.5rem;}
+aside.sidebar div.user div.user-info h3{font-size:1.3rem;}
+aside.sidebar div.user div.user-info h4{font-size:1.1rem;}
+
+/* setting the mouse-hover behaviour for the flex-container-children */
+aside.sidebar div.links:hover, div.content:hover, div.user:hover{
+  background-color:black;
+  /* setting the transition effect */
+  transition-property:background-color;
+  transition-timing-function:ease-in-out;
+  transition-duration:1500ms;
+}
+
+/* setting the mouse:hover behaviour for the body */
+body:hover{
+  background-color:gainsboro;
+  /* setting the transition effect */
+  transition-property:background-color;
+  transition-timing-function:ease;
+  transition-duration:3000ms;
+}

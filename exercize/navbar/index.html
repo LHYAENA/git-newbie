@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>CSS</title>
+</head>
+
+<body>
+  <nav class="container dflex jcont-spbtwn alitms-cntr rw-gap">
+
+    <div class="nav-left dflex alitms-cntr clmn-gap">
+      <h1>Navbar</h1>
+      <div class="nav-links">
+        <ul class="dflex alitms-cntr clmn-gap">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Link</a></li>
+          <li class="dropdown">
+            <a href="#">Dropdown</a>
+            <ul class="dropdown-content">
+              <li><a href="#">One</a></li>
+              <li><a href="#">Two</a></li>
+              <li><a class="disabled" href="#">Three</a></li>
+              <li><a href="#">Four</a></li>
+            </ul>
+          </li>
+          <li><a class="disabled" href="#">Disabled</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <label class="mobile">
+      <span id="color-span" class="menu-icon">&#9776;</span>
+      <input type="checkbox">
+      <ul class="menu">
+        <li><a href=""> WORK </a></li>
+        <li><a href=""> IN </a></li>
+        <li><a href=""> PROGRESS </a></li>
+      </ul>
+    </label>
+
+    <div class="nav-right">
+      <div id="search" class="dflex clmn-gap">
+        <input type="text" placeholder="Search">
+        <button type="submit">Search</button>
+      </div>
+    </div>
+
+  </nav>
+</body>
+
+</html>
