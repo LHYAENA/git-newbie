@@ -1,0 +1,95 @@
+body {
+  background-color: black;
+  color: gainsboro;
+  font-family: Arial, Helvetica, sans-serif;
+  height: fit-content;
+  min-height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {display: flex;}
+
+section article div.icon {
+  display:flex;
+  align-items: center;
+  width:200px;  height: 25%;
+}
+
+section article div.icon img {
+  width: 50px;  height: 50px;
+  border-radius: 50%;
+}
+
+section article div.content {
+  display: flex;
+  flex-direction: column;
+  width: 200px;  height: 75%;
+}
+
+article.card1 {background-color: goldenrod}
+article.card2 {background-color: indigo;}
+article.card3 {background-color: midnightblue;}
+
+article.card1 button {color:goldenrod;}
+article.card2 button {color:indigo;}
+article.card3 button {color:midnightblue;}
+
+article.card1,
+article.card2,
+article.card3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;  height: 400px;
+}
+
+article.card1 {
+  border-start-start-radius: 5px;
+  border-end-start-radius: 5px;
+}
+
+article.card3 {
+  border-start-end-radius: 5px;
+  border-end-end-radius: 5px;
+}
+
+article.card1 h2,
+article.card2 h2,
+article.card3 h2 {
+  text-transform: uppercase;
+}
+
+article.card1 p,
+article.card2 p,
+article.card3 p {
+  font-size: 10.5px;
+  line-height: 1.8;
+  width: 180px;
+}
+
+article.card1 button,
+article.card2 button,
+article.card3 button {
+  width: 125px;  height:35px;
+  margin: auto 0 35px;
+  background-color: gainsboro;
+  border-radius: 50px;
+  border: none;
+}
+
+@media screen and (max-width:500px) {
+  section {flex-direction: column;}
+  article.card1 {
+    border-radius: 0;
+    border-start-start-radius: 5px;
+    border-start-end-radius: 5px;
+  }
+  
+  article.card3 {
+    border-radius: 0;
+    border-end-start-radius: 5px;
+    border-end-end-radius: 5px;
+  }
+}
