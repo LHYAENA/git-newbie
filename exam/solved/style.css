@@ -1,0 +1,105 @@
+* {box-sizing: border-box;}
+
+body{
+    height: 100vh;
+    margin:0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container{
+    display:flex;
+    height: 100%;
+}
+
+.container__1 {width:15%;  height: 100%;}
+.container__2 {width:85%;  height: 100%;}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10%;
+    background-color:whitesmoke;
+}
+
+nav div:first-child {
+    display: none;
+    margin-left: .5em;
+    background-color: midnightblue;
+    color: gainsboro;
+}
+
+nav div {
+    width: fit-content;
+    margin-right: .5em;  padding: .2em;
+    background-color: gainsboro;
+    border-radius:5px;
+    font-size: 1.5em;  font-weight: bold;
+}
+
+aside {
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    background-color: grey;
+
+}
+
+aside div {
+    margin: .8em;  padding:.8em;
+    background-color: midnightblue;
+    color:gainsboro;
+    width: 80%;  min-width:fit-content;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;   height: 50%;
+    background-color: pink;
+}
+
+main div input {
+    width:40%;  min-width:80px;
+    padding: .6em 1.5em;
+    border:none;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+
+main div button {
+    width: 20%;  min-width: 40px;
+    padding: .6em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+main img {
+    position: fixed;
+    bottom: .5em;  right: .5em;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:375px){
+    div.container__1{display:none;}
+    .container__2 {width:100%;}
+    nav {justify-content: space-between;}
+    nav div:first-child {display: block;}
+    main{align-items: flex-start;}
+    main div {width: 100%;}
+    main div button {display:none;}
+    main img {left: .5em;  bottom: .5em;}
+}
