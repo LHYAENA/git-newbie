@@ -1,0 +1,25 @@
+body {
+  background-color: grey;
+}
+body div {
+  padding: 8px;
+  text-align: center;
+  background-color: gainsboro;
+  border: 2px solid red;
+}
+body div h1 {
+  color: green;
+  text-decoration: underline blue;
+}
+body div section {
+  display: flex;
+}
+body div article {
+  padding: 8px;
+  border: 2px solid green;
+}
+body div article + article {
+  border-left: none;
+}
+
+/*# sourceMappingURL=style.css.map */

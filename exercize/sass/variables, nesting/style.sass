@@ -1,0 +1,26 @@
+$r: red
+$b: blue
+$g: green
+
+body
+  background-color: grey
+    
+  div
+    padding: 8px
+    text-align: center
+    background-color: gainsboro
+    border:2px solid $r
+
+    h1
+      color: $g
+      text-decoration: underline $b
+
+    section
+      display: flex
+
+    article
+      padding: 8px
+      border: 2px solid $g
+
+    article + article
+      border-left: none
