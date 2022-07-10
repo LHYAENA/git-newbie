@@ -1,0 +1,12 @@
+@function random-hex() {
+  $hex: "";
+  $i: 6;
+  @while $i>0 {
+    $n: random(16);
+    $af-0: A,B,C,D,E,F,0;
+    @if $n>9 {$n: nth($af-0, random(7));}
+    $hex: str-insert($hex, ""+$n, 0);
+    $i: $i - 1;
+  }
+  @return unquote("#"+$hex);
+}

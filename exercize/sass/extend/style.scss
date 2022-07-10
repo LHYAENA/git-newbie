@@ -1,0 +1,56 @@
+$r: red;
+$b: blue;
+$g: green;
+
+body {
+  background-color: grey;
+  
+  div {
+    padding: 8px;
+    text-align: center;
+    background-color: gainsboro;
+    border: 2px solid $r;
+    
+    %color {
+      width:fit-content;
+      margin: 1.25rem auto;
+      color: $g;
+    }
+
+    h1 {
+      @extend %color;
+      text-decoration: underline $b;
+    }
+
+    h2 {
+      @extend %color;
+      padding: 1rem;
+      border: 2px solid $r;
+    }
+
+    section {
+      display: flex;
+      
+      article {
+        padding: 8px;
+        border: 2px solid $g;
+        
+        &:nth-child(even) {color: $r;}
+        &:nth-child(odd) {color: $b;}
+        &+article {border-left: none;}
+      }
+      
+      &+section {
+      display: flex;
+      justify-content: center;
+      margin-top: 8px;
+      
+        article:first-child {
+          width: 100%;
+          color: $g;
+          border: 2px solid $b;
+        }
+      }
+    }
+  }
+}

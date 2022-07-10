@@ -1,3 +1,7 @@
+body .field .bounce {
+  background-color: #C41AD7;
+}
+
 body {
   height: 100vh;
   margin: 0;
@@ -16,11 +20,10 @@ body .field {
   border-radius: 50%;
 }
 body .field .bounce {
+  animation: bounce 1000ms infinite ease-in-out;
   height: 100px;
   width: 100px;
-  background-color: limegreen;
   border-radius: 50%;
-  animation: bounce 1000ms infinite ease-in-out;
 }
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {

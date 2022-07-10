@@ -1,9 +1,9 @@
-@use "variables" as v;
-@use "remverter" as r;
+@use 'variables' as v;
+@use 'remverter' as r;
 
 body {
   background-color: v.$gr;
-  
+
   div {
     padding: r.remverter(8);
     text-align: center;
@@ -14,7 +14,7 @@ body {
       color: v.$g;
       text-decoration: underline v.$b;
     }
-
+    
     section {
       display: flex;
       

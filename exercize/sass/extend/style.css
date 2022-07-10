@@ -1,0 +1,49 @@
+body {
+  background-color: grey;
+}
+body div {
+  padding: 8px;
+  text-align: center;
+  background-color: gainsboro;
+  border: 2px solid red;
+}
+body div h2, body div h1 {
+  width: fit-content;
+  margin: 1.25rem auto;
+  color: green;
+}
+body div h1 {
+  text-decoration: underline blue;
+}
+body div h2 {
+  padding: 1rem;
+  border: 2px solid red;
+}
+body div section {
+  display: flex;
+}
+body div section article {
+  padding: 8px;
+  border: 2px solid green;
+}
+body div section article:nth-child(even) {
+  color: red;
+}
+body div section article:nth-child(odd) {
+  color: blue;
+}
+body div section article + article {
+  border-left: none;
+}
+body div section + section {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+body div section + section article:first-child {
+  width: 100%;
+  color: green;
+  border: 2px solid blue;
+}
+
+/*# sourceMappingURL=style.css.map */

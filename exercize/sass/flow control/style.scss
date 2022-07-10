@@ -1,0 +1,91 @@
+@use 'sass:math';
+
+@function remvert($n) {
+  @return(math.div($n, 16)*1rem);
+}
+
+$r: red;
+$b: blue;
+$g: green;
+
+body {
+  background-color: grey;
+  
+  div {
+    padding: 8px;
+    text-align: center;
+    background-color: gainsboro;
+    border: 2px solid $r;
+    
+    %color {
+      width:fit-content;
+      margin: 1.25rem auto;
+      color: $g;
+    }
+
+    h1 {
+      @extend %color;
+      text-decoration: underline $b;
+    }
+
+    h2 {
+      @extend %color;
+      padding: 1rem;
+      border: 2px solid $r;
+    }
+
+    section {
+      display: flex;
+      
+      article {
+        padding: 8px;
+        border: 2px solid $g;
+        
+        &:nth-child(even) {color: $r;}
+        &:nth-child(odd) {color: $b;}
+        &+article {border-left: none;}
+      }
+      
+      &+section {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8px;
+      
+        article:first-child {
+          width: 100%;
+          color: $g;
+          border: 2px solid $b;
+        }
+      }
+
+      $fs-rem: 1rem, 2rem, 3rem;
+        @each $fs in $fs-rem {
+          .fs-#{$fs} {font-size: $fs;}
+        }
+
+      & div:first-child,
+      & div+div {
+        height: remvert(45);
+        width: remvert(45);
+        padding: initial;
+        text-align: initial;
+      }
+
+      $n: 5;
+      @for $i from 1 through 19 {
+        @if $i!=10 {
+          & div:nth-child(#{$i}) {
+            background-color: darken(#fff, calc($n*1%));
+            color: lighten(#000, calc($n*1%));
+            $n: $n+5;
+          }
+        } @else {
+          & div:nth-child(#{$i}) {
+           background-color: $b;
+           color: $r;
+          }
+        }
+      }
+    }
+  }
+}
