@@ -5,10 +5,10 @@ body {
   background-color: v.$gr;
 
   div {
-    padding: r.remverter(8);
+    padding: r.remverter(v.$padd);
     text-align: center;
     background-color: v.$gain;
-    border: r.remverter(2) solid v.$r;
+    border: r.remverter(v.$bord) solid v.$r;
     
     h1 {
       color: v.$g;
@@ -19,8 +19,8 @@ body {
       display: flex;
       
       article {
-        padding: r.remverter(8);
-        border: r.remverter(2) solid v.$g;
+        padding: r.remverter(v.$padd);
+        border: r.remverter(v.$bord) solid v.$g;
       }
 
       article:nth-child(even) {color: v.$r;}
@@ -32,12 +32,12 @@ body {
     section + section {
       display: flex;
       justify-content: center;
-      margin-top: r.remverter(8);
-      
+      margin-top: r.remverter(v.$padd);
+
       article:first-child {
         width: 100%;
         color: v.$g;
-        border: r.remverter(2) solid v.$b;
+        border: r.remverter(v.$bord) solid v.$b;
       }
     }
   }

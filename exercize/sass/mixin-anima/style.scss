@@ -1,5 +1,5 @@
 @mixin boing($time, $start, $end) {
-  animation: bounce $time infinite ease-in-out;
+  animation: bounce $time ease-out infinite;
 
   @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {transform: translateY($start);}
@@ -17,7 +17,6 @@ body{
   
   .field {
     height: min(400px);  width: min(400px);
-    margin: 0 auto;
     display: grid;
     place-content: center;
     background-color: gainsboro;

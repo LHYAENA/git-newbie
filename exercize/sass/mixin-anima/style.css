@@ -8,7 +8,6 @@ body {
 body .field {
   height: 400px;
   width: 400px;
-  margin: 0 auto;
   display: grid;
   place-content: center;
   background-color: gainsboro;
@@ -20,7 +19,7 @@ body .field .bounce {
   width: 100px;
   background-color: limegreen;
   border-radius: 50%;
-  animation: bounce 1000ms infinite ease-in-out;
+  animation: bounce 1000ms ease-out infinite;
 }
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {

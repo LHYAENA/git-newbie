@@ -10,7 +10,6 @@ body {
 
   .box {
     height: min(400px);  width: min(400px);
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
     place-content: center;
@@ -22,7 +21,7 @@ body {
     .col {
       height: min(80px);  width: min(80px);
       border-radius: 50%;
-      // i'm using for, code below:
+      // i'm using for instead, code below:
       @for $i from 1 through 12 {
         &:nth-child(#{$i}) {
           background-color: random-hex();
@@ -34,6 +33,7 @@ body {
       // @while $i<13 {
       //   &:nth-child(#{$i}) {
       //     background-color: random-hex();
+      //     border: 2px inset random-hex();
       //   }
       //   $i: $i+1;
       // }
