@@ -12,14 +12,14 @@ body {
   background-color: grey;
   
   div {
-    padding: 8px;
+    padding: remvert(8);
     text-align: center;
     background-color: gainsboro;
-    border: 2px solid $r;
+    border: remvert() solid $r;
     
     %color {
       width:fit-content;
-      margin: 1.25rem auto;
+      margin: remvert(20) auto;
       color: $g;
     }
 
@@ -30,16 +30,16 @@ body {
 
     h2 {
       @extend %color;
-      padding: 1rem;
-      border: 2px solid $r;
+      padding: 1remvert(16);
+      border: remvert(2) solid $r;
     }
 
     section {
       display: flex;
       
       article {
-        padding: 8px;
-        border: 2px solid $g;
+        padding: remvert(8);
+        border: remvert(2) solid $g;
         
         &:nth-child(even) {color: $r;}
         &:nth-child(odd) {color: $b;}
@@ -49,16 +49,16 @@ body {
       &+section {
       display: flex;
       justify-content: space-between;
-      margin-top: 8px;
+      margin-top: remvert(8);
       
         article:first-child {
           width: 100%;
           color: $g;
-          border: 2px solid $b;
+          border: remvert(2) solid $b;
         }
       }
 
-      $fs-rem: 1rem, 2rem, 3rem;
+      $fs-rem: remvert(16), remvert(32), remvert(48);
         @each $fs in $fs-rem {
           .fs-#{$fs} {font-size: $fs;}
         }
